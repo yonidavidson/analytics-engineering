@@ -3,6 +3,7 @@
   mkShell,
   stdenv,
   zlib,
+  duckdb
 }:
 #
 # Create a development shell using three sections:
@@ -18,6 +19,7 @@ mkShell {
   # Add extra tools here
   packages = [
     gnumake
+    duckdb
   ];
 
   # Any variable set in this block that isn't a reserved word will be set as an
