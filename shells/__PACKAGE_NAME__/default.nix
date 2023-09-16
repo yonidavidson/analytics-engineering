@@ -18,6 +18,7 @@ mkShell {
     python3
     python3Packages.pip
     python3Packages.duckdb
+    python3Packages.dbt-core
   ];
 
   # Add extra tools here
@@ -27,7 +28,7 @@ mkShell {
 
   # Any variable set in this block that isn't a reserved word will be set as an
   # environment variable in the environment.
-  WELCOME_MESSAGE = "Run make to build this project";
+  WELCOME_MESSAGE = "Welcome to Analytics Engineering workspace";
 
   # A shell hook is a script to run when entering an environment.
   # It can be used to perform any custom activation steps needed for your
