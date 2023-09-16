@@ -3,6 +3,8 @@
   mkShell,
   stdenv,
   zlib,
+  python3,
+  python3Packages,
 }:
 #
 # Create a development shell using three sections:
@@ -13,6 +15,9 @@ mkShell {
   buildInputs = [
     stdenv.cc
     zlib
+    python3
+    python3Packages.pip
+    python3Packages.duckdb
   ];
 
   # Add extra tools here
@@ -28,7 +33,6 @@ mkShell {
   # It can be used to perform any custom activation steps needed for your
   # project.
   shellHook = ''
-    make --version
     echo
     echo "$WELCOME_MESSAGE"
   '';
