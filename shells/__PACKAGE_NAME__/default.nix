@@ -17,8 +17,9 @@ mkShell {
     zlib
     python3
     python3Packages.pip
-    python3Packages.duckdb
-    python3Packages.dbt-core
+    python3Packages.dagster-dbt
+    python3Packages.dagster-webserver
+    python3Packages.dbt-duckdb
   ];
 
   # Add extra tools here
